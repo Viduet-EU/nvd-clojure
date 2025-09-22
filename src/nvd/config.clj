@@ -54,7 +54,9 @@
    Settings$KEYS/NVD_API_VALID_FOR_HOURS   [:nvd-api :valid-for-hours]
    Settings$KEYS/NVD_API_DATAFEED_URL      [:nvd-api :datafeed :url]
    Settings$KEYS/NVD_API_DATAFEED_USER     [:nvd-api :datafeed :user]
-   Settings$KEYS/NVD_API_DATAFEED_PASSWORD [:nvd-api :datafeed :password]})
+   Settings$KEYS/NVD_API_DATAFEED_PASSWORD [:nvd-api :datafeed :password]
+   Settings$KEYS/ANALYZER_OSSINDEX_USER    [:analyzer :ossindex :user]
+   Settings$KEYS/ANALYZER_OSSINDEX_PASSWORD [:analyzer :ossindex :token]})
 
 (def ^:private boolean-mappings
   {Settings$KEYS/ANALYZER_ARCHIVE_ENABLED                     [:analyzer :archive-enabled]
