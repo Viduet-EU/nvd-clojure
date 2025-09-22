@@ -16,8 +16,13 @@
  ;; according to an API key that you can obtain in https://nvd.nist.gov/developers/request-an-api-key
  :nvd-api {:key nil}
 
- #_:analyzer ;; Analyzer options, which are mostly advanced/internal
- #_{:ossindex-warn-only-on-remote-errors
+ :analyzer ;; Analyzer options, which are mostly advanced/internal
+ {:ossindex
+  {;; Sonatype requires authentication, see https://ossindex.sonatype.org/doc/auth-required
+   :username nil
+   :token nil}
+
+  #_#_:ossindex-warn-only-on-remote-errors
     ;; Occasionally necessary for not making HTTP 500 errors from OSS Index (one of the multiple analyzers internally used)
     ;; a reason for execution to fail.
     ;; Please only enable this carefully since it can mean false negatives.
